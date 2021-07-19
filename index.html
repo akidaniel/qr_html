@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+
+<script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="scripts/script.js"></script>
+<style>
+.phoneframe {border:12px solid black; width:280px; height:620px; overflow:auto;
+border-radius: 30px;
+-webkit-border-radius: 30px;
+-moz-border-radius: 30px;
+margin:0 auto;  flex-basis: 280px; flex-grow: 0;
+	flex-shrink: 0;}
+.phoneframe img {max-width:100%; ;
+}
+.BOTONERA, .cambiocontenido {display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+justify-content: center;
+width:280px;
+position:fixed;
+cursor:pointer;
+}
+.cambiocontenido {position: fixed;
+top: 568px;
+z-index: 990; 
+justify-content: flex-start;
+}
+	
+.UK, .ES, .FR {
+display:block;
+text-indent:-625rem;
+width:3rem;
+height:3rem;
+background-repeat:no-repeat;
+background-size:contain;
+cursor: pointer;
+margin: 0.5rem 1rem;
+z-index:222;}
+.LES {display:block;}
+.LFR, .LUK {display:none;}
+.UK {background-image: url(images/uk.png);}
+.ES {background-image: url(images/sp.png);}
+.FR {background-image: url(images/fr.png);}
+.menu_lang, .menu_contenido {display: none;}
+.platos, .vinos, .postres {display: block;
+	width: 4rem;
+	height: 4.5rem;
+	z-index: 999;
+	cursor: pointer;
+	    text-indent: -9999px;
+    margin: 0 5px;
+	
+}
+.platos {background: url(images/menu.png) no-repeat center 43%; background-size: contain;}
+.vinos {background: url(images/bebida.png) no-repeat center 43%; background-size: contain;}
+.postres {background: url(images/post.png) no-repeat center 43%; background-size: contain;}
+.menudevinos, .menudepostres {display:none}
+.mensaje {font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif; font-size:24px; padding: 0 100px 0 0;}
+h1 {font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;}	
+.contenidodemo {display:flex; 
+flex-direction:row; padding: 0 100px;}
+
+
+
+</style>
+</head>
+
+<body>
+
+
+<div class="contenidodemo">
+<div>
+<h1>Demo</h1>
+<ul  class="mensaje"><li>Clic en los botones de idioma para ver los cambios</li><br>
+<li>Desplace el menú desde dentro del marco para ver el contenido oculto </li><br>
+<li>Clic en los botones inferiores para ver los diferentes menús</li></ul></div>
+<div class="phoneframe">
+
+
+<div class="BOTONERA">
+<input type="checkbox" id="menu_lang_id" class="menu_lang">
+<!--<label for="menu_lang_id" class="" onclick="if(document.getElementById('menu_lang_id').value) document.getElementById('menu_share_id').checked = false; if(document.getElementById('menu_lang_id').value) document.getElementById('menu_buy_id').checked = false;">-->
+</label>
+<a class="ES" href="#">
+</a>
+<a class="UK" href="#">
+</a>
+<a class="FR" href="#">
+</a>
+</div>
+<div class="menucomida">
+<div class="menuitem LES"><img src="images/platoses.jpg"></div>
+<div class="menuitem LUK"><img src="images/platosuk.jpg"></div>
+<div class="menuitem LFR"><img src="images/platosfr.jpg"></div></div>
+<div class="menudevinos">
+<div class="menuitem LES"><img src="images/vinoses.jpg"></div>
+<div class="menuitem LUK"><img src="images/vinosuk.jpg"></div>
+<div class="menuitem LFR"><img src="images/vinosfr.jpg"></div></div>
+<div class="menudepostres">
+<div class="menuitem LES"><img src="images/postreses.jpg"></div>
+<div class="menuitem LUK"><img src="images/postresuk.jpg"></div>
+<div class="menuitem LFR"><img src="images/postresfr.jpg"></div></div>
+<!--CUADRO BOTONERA INFERIOR-->
+
+<div class="cambiocontenido">
+<input type="checkbox" id="contenido" class="menu_contenido">
+<!--<label for="contenido" class="" onclick="if(document.getElementById('contenido').value) document.getElementById('menu_share_id').checked = false; if(document.getElementById('contenido').value) document.getElementById('menu_buy_id').checked = false;">-->
+</label>
+
+<a class="platos" href="#">hola</a>
+<a class="vinos" href="#">hola</a>
+<a class="postres" href="#">hola</a>
+
+</div>
+</div>
+
+</body>
+</html>
