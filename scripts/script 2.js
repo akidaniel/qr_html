@@ -47,7 +47,7 @@ $('.postres').on('click', function() {
 });
 
 
-//MENU PETXINES
+//MENUS
 /*
   @method Cards
   @description this is for label based radio navigation to change the labels style to 'active'
@@ -140,8 +140,6 @@ cards[0].classList.add("card--right");
 cards[1].classList.add("card--rightright");
 
     }
-	
-
   }
 
   return {
