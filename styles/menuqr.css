@@ -1,0 +1,193 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html {font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;}
+.phoneframe {border:12px solid black; width:280px; height:620px; overflow:auto;
+border-radius: 30px;
+-webkit-border-radius: 30px;
+-moz-border-radius: 30px;
+margin:0 auto;  flex-basis: 280px; flex-grow: 0;
+	flex-shrink: 0;}
+.phoneframe img {max-width:100%; ;
+}
+.BOTONERA, .cambiocontenido {display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+justify-content: center;
+width:280px;
+position:sticky;
+cursor:pointer;
+top:0;
+z-index:40;
+}
+.cambiocontenido {position: sticky;
+bottom: 0;
+z-index: 990; 
+justify-content: flex-start;
+}
+	
+.UK, .ES, .FR {
+display:block;
+text-indent:-625rem;
+width:3rem;
+height:3rem;
+background-repeat:no-repeat;
+background-size:contain;
+cursor: pointer;
+margin: 0.5rem 1rem;
+z-index:222;}
+.LES {display:block;}
+.LFR, .LUK {display:none;}
+.UK {background-image: url(https://akidaniel.github.io/qr_html/images/uk.png);}
+.ES {background-image: url(https://akidaniel.github.io/qr_html/images/sp.png);}
+.FR {background-image: url(https://akidaniel.github.io/qr_html/images/fr.png);}
+.menu_lang, .menu_contenido {display: none;}
+.platos, .vinos, .postres {display: block;
+	width: 4rem;
+	height: 4.5rem;
+	z-index: 999;
+	cursor: pointer;
+	    text-indent: -9999px;
+    margin: 0 5px;
+	
+}
+.platos {background: url(https://akidaniel.github.io/qr_html/images/menu.png) no-repeat center 43%; background-size: contain;}
+.vinos {background: url(https://akidaniel.github.io/qr_html/images/bebida.png) no-repeat center 43%; background-size: contain;}
+.postres {background: url(https://akidaniel.github.io/qr_html/images/post.png) no-repeat center 43%; background-size: contain;}
+.menucomida, .menudevinos, .menudepostres{position: relative; top: -4rem; margin-bottom: -8.5rem;
+}
+.menudevinos, .menudepostres {display:none}
+.mensaje {font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif; font-size:20px; padding: 0 1.25rem; line-height:150%;}
+h1 {font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif; color:#002278; line-height:80%;}
+h2 {font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif; color:#002278; line-height:80%;}	
+	
+.contenidodemo {display:flex; 
+flex-direction:row; padding: 4rem; background-color:#e9d3ff; margin:0 0 -4rem;}
+
+<!--QR CLIENTS-->
+.examples
+{width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  font-family: Helvetica;
+  background-image: url(https://akidaniel.github.io/qr_html/images/fondopetxines.jpg);
+}
+
+.cards_petxines, .cards_victoria, .cards_kitsume
+{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+  position: relative;
+  height:21.875rem;
+  width:100%;
+
+}
+
+.card
+{
+  display:flex;
+  width:285px;
+  height:600px;
+  border-radius:2.3rem;
+  transform-origin:center center;
+  transform:scale(1) translate(0px,0px) perspective( 750px ) rotateY(0deg);
+  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  transition-duration: 0.5s;
+  position:absolute;
+  top:0;
+  z-index:3;
+  cursor: pointer;
+  overflow:hidden;
+}
+
+.card *
+{
+  pointer-events: none;
+}
+
+.card--leftleft
+{
+  transform:scale(0.75) translate(-550px,0px) perspective( 750px ) rotateY(10deg);
+  z-index:1;
+}
+
+
+.card--left
+{
+  transform:scale(0.85) translate(-280px,0px) perspective( 750px ) rotateY(10deg);
+  z-index:2;
+}
+
+.card--center
+{
+  transform:scale(1) translate(0px, 0px) perspective( 750px ) rotateY(0deg);
+  z-index:3;
+}
+
+.card--right
+{
+  transform:scale(0.85) translate(280px,0px) perspective( 750px ) rotateY(-10deg);
+  z-index:2;
+}
+
+
+.card--rightright
+{
+  transform:scale(0.75) translate(550px,0px) perspective( 750px ) rotateY(-10deg);
+  z-index:1;
+}
+
+#x_petxines, #x_victoria, #x_kitsume {padding: 4rem 2rem 24rem;
+    margin: 4rem 0 -4rem;}
+#x_petxines {background-image: url(https://akidaniel.github.io/qr_html/images/fondopetxines.jpg);}
+#x_kitsume {background-image: url(https://akidaniel.github.io/qr_html/images/fondokitsume.jpg);}
+#x_victoria {background-image: url(https://akidaniel.github.io/qr_html/images/fondovictoria.jpg);}
+	
+@media only screen and (max-width : 736px)
+{
+  .cards
+  {
+    flex-direction:column;
+    margin:auto 0;
+  }
+
+  .card
+  {
+    display:flex;
+    width:90%;
+
+  }
+ .card--leftleft
+  {
+    transform:scale(0.75) translate(0px, -200px) perspective(750px) rotateY(0) rotateX(-10deg) translateZ(-5px);
+  }
+  .card--left
+  {
+    transform:scale(0.85) translate(0px, -92px) perspective(750px) rotateY(0) rotateX(-10deg) translateZ(-5px);
+  }
+
+  .card--center
+  {
+    transform:scale(1) translate(0px, 0px) perspective( 750px ) rotateY(0deg)  rotateX(0deg) translateZ(5px);
+  }
+
+  .card--right
+  {
+    transform:scale(0.85) translate(0px, 92px) perspective(750px) rotateY(0) rotateX(10deg) translateZ(-5px);
+  }
+  
+  .card--rightright
+  {
+    transform:scale(0.75) translate(0px, 200px) perspective(750px) rotateY(0) rotateX(10deg) translateZ(-5px);
+  }
+
+ 
+}
+
+
