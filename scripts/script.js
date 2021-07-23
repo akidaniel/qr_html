@@ -49,10 +49,10 @@ $('.postres').on('click', function() {
 
 //MENU PETXINES
 /*
-  @method Cards
+  @method cards_petxines
   @description this is for label based radio navigation to change the labels style to 'active'
  */
-const Cards = ((() => {
+const cards_petxines = ((() => {
   /*
    * @description dom loaded event listener
    */
@@ -61,15 +61,15 @@ window.addEventListener('DOMContentLoaded', () => {setTimeout(init,1)}, true);
   /*
    * @method init
    * @parameter e {event}
-   * @description initiates event listeners on all cards
+   * @description initiates event listeners on all cards_petxines
    */
   function init(e)
   {
-    if(document.querySelector(".cards"))
+    if(document.querySelector(".cards_petxines"))
     {
-      let cards = document.querySelector(".cards");
-      cards.addEventListener('click', clicked, false);
-      document.querySelectorAll(".cards .card")[1].click();
+      let cards_petxines = document.querySelector(".cards_petxines");
+      cards_petxines.addEventListener('click', clicked, false);
+      document.querySelectorAll(".cards_petxines .card")[1].click();
     }
   }
 
@@ -91,53 +91,258 @@ window.addEventListener('DOMContentLoaded', () => {setTimeout(init,1)}, true);
    */
   function rearrange(card)
   {
-    let cards = document.querySelectorAll(".cards .card");
-    for(let n = 0; n < cards.length; n++)
+    let cards_petxines = document.querySelectorAll(".cards_petxines .card");
+    for(let n = 0; n < cards_petxines.length; n++)
     {
-cards[n].classList.remove("card--leftleft");
-cards[n].classList.remove("card--left");
-cards[n].classList.remove("card--center");
-cards[n].classList.remove("card--right");
-cards[n].classList.remove("card--rightright");
+cards_petxines[n].classList.remove("card--leftleft");
+cards_petxines[n].classList.remove("card--left");
+cards_petxines[n].classList.remove("card--center");
+cards_petxines[n].classList.remove("card--right");
+cards_petxines[n].classList.remove("card--rightright");
 
     }
-cards[card].classList.add("card--center");
+cards_petxines[card].classList.add("card--center");
     if(card == 0)
     {
-cards[3].classList.add("card--leftleft");
-cards[4].classList.add("card--left");
-cards[1].classList.add("card--right");
-cards[2].classList.add("card--rightright");
+cards_petxines[3].classList.add("card--leftleft");
+cards_petxines[4].classList.add("card--left");
+cards_petxines[1].classList.add("card--right");
+cards_petxines[2].classList.add("card--rightright");
 }
 if(card == 1)
 {
-cards[4].classList.add("card--leftleft");
-cards[0].classList.add("card--left");
-cards[2].classList.add("card--right");
-cards[3].classList.add("card--rightright");
+cards_petxines[4].classList.add("card--leftleft");
+cards_petxines[0].classList.add("card--left");
+cards_petxines[2].classList.add("card--right");
+cards_petxines[3].classList.add("card--rightright");
 
 }
 if(card == 2)
-{cards[0].classList.add("card--leftleft");
-cards[1].classList.add("card--left");
-cards[3].classList.add("card--right");
-cards[4].classList.add("card--rightright");
+{cards_petxines[0].classList.add("card--leftleft");
+cards_petxines[1].classList.add("card--left");
+cards_petxines[3].classList.add("card--right");
+cards_petxines[4].classList.add("card--rightright");
 
     }
  
 if(card == 3)
-{cards[1].classList.add("card--leftleft");
-cards[2].classList.add("card--left");
-cards[4].classList.add("card--right");
-cards[0].classList.add("card--rightright");
+{cards_petxines[1].classList.add("card--leftleft");
+cards_petxines[2].classList.add("card--left");
+cards_petxines[4].classList.add("card--right");
+cards_petxines[0].classList.add("card--rightright");
 
     }
 
 if(card == 4)
-{cards[2].classList.add("card--leftleft");
-cards[3].classList.add("card--left");
-cards[0].classList.add("card--right");
-cards[1].classList.add("card--rightright");
+{cards_petxines[2].classList.add("card--leftleft");
+cards_petxines[3].classList.add("card--left");
+cards_petxines[0].classList.add("card--right");
+cards_petxines[1].classList.add("card--rightright");
+
+    }
+	
+
+  }
+
+  return {
+    init
+  }
+})());
+
+//MENU VICTORIA
+/*
+  @method cards_victoria
+  @description this is for label based radio navigation to change the labels style to 'active'
+ */
+const cards_victoria = ((() => {
+  /*
+   * @description dom loaded event listener
+   */
+window.addEventListener('DOMContentLoaded', () => {setTimeout(init,1)}, true);
+
+  /*
+   * @method init
+   * @parameter e {event}
+   * @description initiates event listeners on all cards_victoria
+   */
+  function init(e)
+  {
+    if(document.querySelector(".cards_victoria"))
+    {
+      let cards_victoria = document.querySelector(".cards_victoria");
+      cards_victoria.addEventListener('click', clicked, false);
+      document.querySelectorAll(".cards_victoria .card")[1].click();
+    }
+  }
+
+  /*
+   * @method clicked
+   * @parameter e {event}
+   * @description this is the callback from the assigned event listener binding
+   */
+  function clicked(e)
+  {
+    let card = e.target;
+    if(card.getAttribute("data-card")){rearrange(card.getAttribute("data-card"));}
+  }
+
+  /*
+   * @method rearrange
+   * @parameter card {object}
+   * @description this is the callback from the assigned event listener binding
+   */
+  function rearrange(card)
+  {
+    let cards_victoria = document.querySelectorAll(".cards_victoria .card");
+    for(let n = 0; n < cards_victoria.length; n++)
+    {
+cards_victoria[n].classList.remove("card--leftleft");
+cards_victoria[n].classList.remove("card--left");
+cards_victoria[n].classList.remove("card--center");
+cards_victoria[n].classList.remove("card--right");
+cards_victoria[n].classList.remove("card--rightright");
+
+    }
+cards_victoria[card].classList.add("card--center");
+    if(card == 0)
+    {
+cards_victoria[3].classList.add("card--leftleft");
+cards_victoria[4].classList.add("card--left");
+cards_victoria[1].classList.add("card--right");
+cards_victoria[2].classList.add("card--rightright");
+}
+if(card == 1)
+{
+cards_victoria[4].classList.add("card--leftleft");
+cards_victoria[0].classList.add("card--left");
+cards_victoria[2].classList.add("card--right");
+cards_victoria[3].classList.add("card--rightright");
+
+}
+if(card == 2)
+{cards_victoria[0].classList.add("card--leftleft");
+cards_victoria[1].classList.add("card--left");
+cards_victoria[3].classList.add("card--right");
+cards_victoria[4].classList.add("card--rightright");
+
+    }
+ 
+if(card == 3)
+{cards_victoria[1].classList.add("card--leftleft");
+cards_victoria[2].classList.add("card--left");
+cards_victoria[4].classList.add("card--right");
+cards_victoria[0].classList.add("card--rightright");
+
+    }
+
+if(card == 4)
+{cards_victoria[2].classList.add("card--leftleft");
+cards_victoria[3].classList.add("card--left");
+cards_victoria[0].classList.add("card--right");
+cards_victoria[1].classList.add("card--rightright");
+
+    }
+	
+
+  }
+
+  return {
+    init
+  }
+})());
+
+
+//MENU VICTORIA
+/*
+  @method cards_kitsume
+  @description this is for label based radio navigation to change the labels style to 'active'
+ */
+const cards_kitsume = ((() => {
+  /*
+   * @description dom loaded event listener
+   */
+window.addEventListener('DOMContentLoaded', () => {setTimeout(init,1)}, true);
+
+  /*
+   * @method init
+   * @parameter e {event}
+   * @description initiates event listeners on all cards_kitsume
+   */
+  function init(e)
+  {
+    if(document.querySelector(".cards_kitsume"))
+    {
+      let cards_kitsume = document.querySelector(".cards_kitsume");
+      cards_kitsume.addEventListener('click', clicked, false);
+      document.querySelectorAll(".cards_kitsume .card")[1].click();
+    }
+  }
+
+  /*
+   * @method clicked
+   * @parameter e {event}
+   * @description this is the callback from the assigned event listener binding
+   */
+  function clicked(e)
+  {
+    let card = e.target;
+    if(card.getAttribute("data-card")){rearrange(card.getAttribute("data-card"));}
+  }
+
+  /*
+   * @method rearrange
+   * @parameter card {object}
+   * @description this is the callback from the assigned event listener binding
+   */
+  function rearrange(card)
+  {
+    let cards_kitsume = document.querySelectorAll(".cards_kitsume .card");
+    for(let n = 0; n < cards_kitsume.length; n++)
+    {
+cards_kitsume[n].classList.remove("card--leftleft");
+cards_kitsume[n].classList.remove("card--left");
+cards_kitsume[n].classList.remove("card--center");
+cards_kitsume[n].classList.remove("card--right");
+cards_kitsume[n].classList.remove("card--rightright");
+
+    }
+cards_kitsume[card].classList.add("card--center");
+    if(card == 0)
+    {
+cards_kitsume[3].classList.add("card--leftleft");
+cards_kitsume[4].classList.add("card--left");
+cards_kitsume[1].classList.add("card--right");
+cards_kitsume[2].classList.add("card--rightright");
+}
+if(card == 1)
+{
+cards_kitsume[4].classList.add("card--leftleft");
+cards_kitsume[0].classList.add("card--left");
+cards_kitsume[2].classList.add("card--right");
+cards_kitsume[3].classList.add("card--rightright");
+
+}
+if(card == 2)
+{cards_kitsume[0].classList.add("card--leftleft");
+cards_kitsume[1].classList.add("card--left");
+cards_kitsume[3].classList.add("card--right");
+cards_kitsume[4].classList.add("card--rightright");
+
+    }
+ 
+if(card == 3)
+{cards_kitsume[1].classList.add("card--leftleft");
+cards_kitsume[2].classList.add("card--left");
+cards_kitsume[4].classList.add("card--right");
+cards_kitsume[0].classList.add("card--rightright");
+
+    }
+
+if(card == 4)
+{cards_kitsume[2].classList.add("card--leftleft");
+cards_kitsume[3].classList.add("card--left");
+cards_kitsume[0].classList.add("card--right");
+cards_kitsume[1].classList.add("card--rightright");
 
     }
 	
