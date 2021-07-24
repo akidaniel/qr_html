@@ -1,12 +1,15 @@
 @charset "UTF-8";
 /* CSS Document */
 
-html {font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;}
+html {font-family:'Magra', sans-serif;     margin: 0;
+padding:0; border:0;}
 body { margin: 0; padding: 0; }
-.wrap {/*background-color:#e9d3ff;*/ border:0; margin:0; background:url(https://images.unsplash.com/photo-1581084158167-c9578e5e858e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80) cover no-repeat;}
+.wrap {background-color:#e9d3ff; border:0; margin:0; overflow: hidden;
+/*background-image:url(https://akidaniel.github.io/qr_html/images/fondo.jpg); background-repeat:no-repeat; background-size: auto;*/}
 header {padding:3rem 0; text-align:center; font-style:normal; font-size:4rem; color:#002278; font-weight: bold;}
-h1 {color:#002278; line-height:80%;}
-h2 {color:#002278; line-height:80%;}	
+header h4 {font-size:2rem; font-weight:100; margin:0;}
+h1 {color:#002278; font-size:2rem;}
+h2 {color:#002278;}	
 .phoneframe {border:12px solid black; width:280px; height:620px; overflow:auto;
 border-radius: 30px;
 -webkit-border-radius: 30px;
@@ -64,21 +67,21 @@ z-index:222;}
 .menucomida, .menudevinos, .menudepostres{position: relative; top: -4rem; margin-bottom: -8.5rem;
 }
 .menudevinos, .menudepostres {display:none}
-.mensaje {font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif; font-size:20px; padding: 0 1.25rem; line-height:150%;}
+.mensaje {font-size:1.5rem; padding: 0 1.25rem 2rem; line-height:150%; font-weight:400; margin:0;}
 
 	
 .contenidodemo {display:flex; 
-flex-direction:row; padding: 4rem; margin:0 0 -4rem;}
+flex-direction:row;
+padding: 1rem 4rem 3rem;
+margin:0 0 -4rem;}
 
 <!--QR CLIENTS-->
 .examples
 {width:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:100%;
-  font-family: Helvetica;
-  background-image: url(https://akidaniel.github.io/qr_html/images/fondopetxines.jpg);
+display:flex;
+align-items:center;
+justify-content:center;
+width:100%;
 }
 
 .cards_petxines, .cards_victoria, .cards_kitsume
@@ -147,7 +150,7 @@ flex-direction:row; padding: 4rem; margin:0 0 -4rem;}
   z-index:1;
 }
 
-#x_petxines, #x_victoria, #x_kitsume {padding: 4rem 2rem 24rem;
+#x_petxines, #x_victoria, #x_kitsume {padding: 4rem 4rem 24rem;
     margin: 4rem 0 -4rem;}
 #x_petxines {background-image: url(https://akidaniel.github.io/qr_html/images/fondopetxines.jpg);}
 #x_kitsume {background-image: url(https://akidaniel.github.io/qr_html/images/fondokitsume.jpg);}
@@ -155,7 +158,23 @@ flex-direction:row; padding: 4rem; margin:0 0 -4rem;}
 	
 @media only screen and (max-width : 736px)
 {
-  .cards
+	header {
+    padding: 2rem 2rem 0; font-size: 2.2rem;}
+	.contenidodemo {display:block; padding:1rem; margin:0;} 
+#x_petxines, #x_victoria, #x_kitsume {
+    padding: 1rem 2rem 24rem;}
+.phoneframe {    margin: 3rem auto 0;
+}
+
+.mensaje {
+       padding: 0 1rem 3rem 2rem;}
+	
+	header h4 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0;
+}
+
+/* .cards
   {
     flex-direction:column;
     margin:auto 0;
@@ -167,7 +186,7 @@ flex-direction:row; padding: 4rem; margin:0 0 -4rem;}
     width:90%;
 
   }
- .card--leftleft
+.card--leftleft
   {
     transform:scale(0.75) translate(0px, -200px) perspective(750px) rotateY(0) rotateX(-10deg) translateZ(-5px);
   }
@@ -189,8 +208,7 @@ flex-direction:row; padding: 4rem; margin:0 0 -4rem;}
   .card--rightright
   {
     transform:scale(0.75) translate(0px, 200px) perspective(750px) rotateY(0) rotateX(10deg) translateZ(-5px);
-  }
-
+  }*/
  
 }
 
