@@ -176,6 +176,9 @@ margin:0 auto; max-width:80rem;}
 
 .contenidodemo div {
     margin: 0 0.5rem;}
+	
+	.contenidodemo h2 {
+    text-align: center;}
 
 /* .cards
   {
