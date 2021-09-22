@@ -76,11 +76,36 @@ z-index:222;}
 	
 .contenidodemo {display:flex; 
 flex-direction:row;
-padding: 1rem 4rem 3rem;
-margin:0 auto; max-width:80rem;}
+padding-bottom: 3rem;
+justify-content: center; flex-wrap: wrap;
+display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+box-sizing: content-box;
+max-width:1200px;
+margin:0 auto;
+}
 
-.contenidodemo div {margin:0 3rem; flex-grow: 1;
-    flex-basis: 0;}
+.contenidodemo div {margin: 0 1rem;
+   border: 2px solid white;
+    border-radius: 18px;
+    padding: 0 1rem 0 2rem;
+    max-width: 25%;}
+#demo	{
+    border: 2px solid white;
+    border-radius: 18px;
+    padding: 2rem 0;
+    margin: 0 auto 4rem;
+	max-width: 1120px;
+	    width: calc(100% - 2rem);
+}
+#demo div {border:none; margin:0; max-width: 45%;}
 .examples {margin:0 auto; max-width:80rem;}
 
 .cards_petxines, .cards_victoria, .cards_kitsume
@@ -153,33 +178,38 @@ margin:0 auto; max-width:80rem;}
 #x_petxines {background-image: url(https://akidaniel.github.io/qr_html/images/fondopetxines.jpg);}
 #x_kitsume {background-image: url(https://akidaniel.github.io/qr_html/images/fondokitsume.jpg);}
 #x_victoria {background-image: url(https://akidaniel.github.io/qr_html/images/fondovictoria.jpg);}
-	
-@media only screen and (max-width : 736px)
+.li-img {padding: 0; margin: 1rem 0 0 -0.5rem; list-style-type: none;}
+.li-img img { max-width:100%;}
+@media only screen and (max-width : 1010px)
+{.contenidodemo div {max-width:20%; }
+
+}
+@media only screen and (max-width : 860px)
 {
-	header {
+header {
     padding: 2rem 2rem 0; font-size: 2.2rem;}
-	.subtitulos {font-size:2.2rem; padding:1rem;}
-	.contenidodemo {display:block; padding:1rem; margin:0;}
-	.mensaje {font-size:1.2rem} 
+.subtitulos {font-size:2.2rem; padding:1rem;}
+.contenidodemo {display:block; padding:1rem; margin:0;}
+.mensaje {font-size:1.2rem} 
 #x_petxines, #x_victoria, #x_kitsume {
     padding: 1rem 2rem 24rem;}
 .phoneframe {margin: 0 auto 3rem;
 }
 
-.mensaje {
-       padding: 0 1rem 3rem 2rem;}
-	
-	header h4 {
+h2 .fas, h2 .fa {display:none;}	
+header h4 {
     font-size: 1.5rem;
     margin: 1rem 0 0;
 }
 
-.contenidodemo div {
-    margin: 0 0.5rem;}
-	
-	.contenidodemo h2 {
+.contenidodemo div, #demo div {max-width: 100%; margin:0; border:0; padding:0;}
+#demo {padding:1rem; border:0; }
+.contenidodemo h2 {
     text-align: center;}
 
+.li-img {text-align: center; margin: 1rem 0 0 -1.5rem;}
+.li-img img {width: 70%;
+    max-width: none;}
 /* .cards
   {
     flex-direction:column;
@@ -218,4 +248,5 @@ margin:0 auto; max-width:80rem;}
  
 }
 
-
+@media only screen and (max-width : 736px)
+{.li-img img {width: 108%;}}
